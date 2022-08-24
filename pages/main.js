@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import data from '../datame.json';
+import styles from '../styles/Home.module.css';
 
 // const [myData, setMydata] = useState(data.slice(0, 50));
 
@@ -12,30 +13,36 @@ import {
 } from 'react-icons/fa';
 import { GrLocation } from 'react-icons/gr';
 import { MdOutlineWatchLater } from 'react-icons/md';
-import { Image } from 'next/image';
-
-//  pagenation logic
-
-// const [myData, setrMydata] = useState(data.slice(0, 50));
-// const [pageNumber, setPageNumber] = useState(0);
-// const userPerPage = 10;
-// const pageVisitade = pageNumber + userPerPage;
-// const displayUser = myData.slice(pageVisitade, pageVisitade + userPerPage);
-
-// end pagenation logic
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import ReactPaginate from 'react-paginate';
 
 const Main = () => {
+	//  pagenation logic
+
+	const [myData, setrMydata] = useState(data.slice(0, 30));
+	const [pageNumber, setPageNumber] = useState(0);
+	const userPerPage = 3;
+	const pageVisited = pageNumber * userPerPage;
+	const displayUser = myData.slice(pageVisited, pageVisited + userPerPage);
+
+	const perPageCount = Math.ceil(myData.length, userPerPage);
+
+	const handlePageClick = ({ selected }) => {
+		setPageNumber(selected);
+	};
+
+	// end pagenation logic
 	return (
 		<div>
-			<div className='m-6 mx-36'>
-				<div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
-					{data.map((value, index) => (
+			<div className='m-2 md:m-6 mx-8 md:mx-36'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2  lg:gap-4 xl:gap-6'>
+					{displayUser.map((value, index) => (
 						<div
-							className=' w-full h-96 bg-primaryColor fcc'
-							key={value.id}>
+							key={value.id}
+							className='w-full h-96 bg-primaryColor fcc'>
 							<div className='avatar'>
-								<div className=' w-32 rounded-full '>
-									<img src={value.img} alt='' />
+								<div className=' w-24 lg:w-24 xl:w-32 rounded-full '>
+									<img src={value.img} />
 								</div>
 							</div>
 							<span className=' text-2xl font-bold my-2'>
@@ -74,6 +81,23 @@ const Main = () => {
 						</div>
 					))}
 				</div>
+			</div>
+
+			<div className=' mx-36 pageCounterMe'>
+				<ReactPaginate
+					nextLabel='next >'
+					onPageChange={handlePageClick}
+					breakLabel='...'
+					pageRangeDisplayed={2}
+					marginPagesDisplayed={3}
+					pageCount={perPageCount}
+					previousLabel='< previous'
+					containerClassName={'paginationBttns'}
+					previousLinkClassName={'previousBttn'}
+					nextLinkClassName={'nextBttn'}
+					disabledClassName={'paginationDisabled'}
+					activeClassName={'paginationActive'}
+				/>
 			</div>
 		</div>
 	);
