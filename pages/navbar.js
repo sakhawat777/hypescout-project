@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaAlignJustify, FaRegWindowClose } from 'react-icons/fa';
-import logo from '../public/img/logo.png';
 const Navbar = () => {
 	const [shadowMe, setShadow] = useState(false);
 	const [sideBar, setSidebar] = useState(false);
@@ -34,21 +33,25 @@ const Navbar = () => {
 						<span className=' text-2xl'>Hypescout</span>
 					</div>
 					<div className='h-full flex justify-end items-center flex-1 gap-4 t'>
-						<Link href='/#heading'>
+						<Link href='/#dashboard'>
 							<span className=' cursor-pointer hover:text-white text-2xl'>
 								Dashboard
 							</span>
 						</Link>
-						<Link href='/#contact'>
+						<Link href='/#campaign'>
 							<span className=' cursor-pointer hover:text-white text-2xl'>
 								Campaign
 							</span>
 						</Link>
-						{/* <Link href='/#about'>
-							<span className=' cursor-pointer hover:text-white text-2xl'>Hypesocial</span>
+						{/* <Link href='/#hypesocial'>
+							<span className=' cursor-pointer hover:text-white text-2xl'>
+								Hypesocial
+							</span>
 						</Link>
-						<Link href='/#login'>
-							<span className=' cursor-pointer hover:text-white text-2xl'>Insights</span>
+						<Link href='/#insights'>
+							<span className=' cursor-pointer hover:text-white text-2xl'>
+								Insights
+							</span>
 						</Link> */}
 
 						<div className='md:hidden'>
@@ -71,28 +74,28 @@ const Navbar = () => {
 							? 'md:hidden absolute left-0 top-[5rem] w-full h-screen bg-red-900 ease-in duration-300 z-40 fcc'
 							: 'fixed left-[-25%] top-[70px] w-[25%] h-screen bg-slate-700 ease-in duration-300 z-40 fcc'
 					}>
-					<Link href='/#heading'>
+					<Link href='/#dashboard'>
 						<span
 							onClick={sideMe}
 							className=' cursor-pointer hover:text-white text-2xl'>
 							Dashboard
 						</span>
 					</Link>
-					<Link href='/#contact'>
+					<Link href='/#campaign'>
 						<span
 							onClick={sideMe}
 							className=' cursor-pointer hover:text-white text-2xl'>
 							Campaign
 						</span>
 					</Link>
-					<Link href='/#about'>
+					<Link href='/#hypesocial'>
 						<span
 							onClick={sideMe}
 							className=' cursor-pointer hover:text-white text-2xl'>
 							Hypesocial
 						</span>
 					</Link>
-					<Link href='/#login'>
+					<Link href='/#insights'>
 						<span
 							onClick={sideMe}
 							className=' cursor-pointer hover:text-white text-2xl'>
