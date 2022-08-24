@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import Footer from './footer';
 import Main from './main';
 import Navbar from './navbar';
+import SearchField from './searchField';
 
 export default function Home() {
 	return (
@@ -14,9 +15,10 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Navbar></Navbar>
-			<Main></Main>
-			<Footer></Footer>
+			<Navbar />
+			<SearchField />
+			<Main />
+			<Footer />
 		</div>
 	);
 }
