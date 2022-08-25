@@ -16,6 +16,7 @@ export default function Home() {
 			</Head>
 
 			<Navbar></Navbar>
+
 			<SearchField></SearchField>
 			<Main></Main>
 			<Footer></Footer>

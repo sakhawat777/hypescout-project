@@ -4,13 +4,7 @@ import styles from '../styles/Home.module.css';
 
 // const [myData, setMydata] = useState(data.slice(0, 50));
 
-import {
-	FaAlignJustify,
-	FaFacebookSquare,
-	FaInstagram,
-	FaLinkedin,
-	FaTwitter,
-} from 'react-icons/fa';
+import { FaAlignJustify, FaFacebookSquare, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { GrLocation } from 'react-icons/gr';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
@@ -37,25 +31,19 @@ const Main = () => {
 			<div className='m-2 md:m-6 mx-8 md:mx-36'>
 				<div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2  lg:gap-4 xl:gap-6'>
 					{displayUser.map((value, index) => (
-						<div
-							key={value.id}
-							className='w-full h-96 bg-primaryColor fcc'>
-							<div className='avatar'>
-								<div className=' w-24 lg:w-24 xl:w-32 rounded-full '>
+						<div className='w-full h-96  bg-primaryColor  fcc'>
+							<div class='avatar'>
+								<div class=' w-24 lg:w-24 xl:w-32 rounded-full '>
 									<img src={value.img} />
 								</div>
 							</div>
-							<span className=' text-2xl font-bold my-2'>
-								{value.name}
-							</span>
+							<span className=' text-2xl font-bold my-2'>{value.name}</span>
 							<div className=' flex flex-row items-center'>
 								<GrLocation className=' mr-2' size={25}></GrLocation>
 								<span>{value.location}</span>
 							</div>
 							<div className=' flex flex-row items-center'>
-								<MdOutlineWatchLater
-									className=' mr-2'
-									size={25}></MdOutlineWatchLater>
+								<MdOutlineWatchLater className=' mr-2' size={25}></MdOutlineWatchLater>
 								<span>{value.joined}</span>
 							</div>
 							<div className='socialLink mt-2 flex justify-between items-center'>
@@ -84,20 +72,7 @@ const Main = () => {
 			</div>
 
 			<div className=' mx-36 pageCounterMe'>
-				<ReactPaginate
-					nextLabel='next >'
-					onPageChange={handlePageClick}
-					breakLabel='...'
-					pageRangeDisplayed={2}
-					marginPagesDisplayed={3}
-					pageCount={perPageCount}
-					previousLabel='< previous'
-					containerClassName={'paginationBttns'}
-					previousLinkClassName={'previousBttn'}
-					nextLinkClassName={'nextBttn'}
-					disabledClassName={'paginationDisabled'}
-					activeClassName={'paginationActive'}
-				/>
+				<ReactPaginate nextLabel='next >' onPageChange={handlePageClick} breakLabel='...' pageRangeDisplayed={2} marginPagesDisplayed={3} pageCount={perPageCount} previousLabel='< previous' containerClassName={'paginationBttns'} previousLinkClassName={'previousBttn'} nextLinkClassName={'nextBttn'} disabledClassName={'paginationDisabled'} activeClassName={'paginationActive'} />
 			</div>
 		</div>
 	);
