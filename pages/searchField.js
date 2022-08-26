@@ -23,7 +23,7 @@ const SearchField = ({ dark }) => {
 							}`}
 						/>
 					</div>
-					<div className='right  flex-1 md:ml-4'>
+					<div className='right md:ml-4'>
 						<div className=' bg-secondaryColor flex justify-center items-center p-4 rounded-lg cursor-pointer text-white'>
 							<BsFunnel className='text-2xl mr-1'></BsFunnel>
 							Advance Filter
