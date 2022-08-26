@@ -3,37 +3,37 @@
         "id":1,
         "name":"Maksudul Hasan",
         "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/hasan.png"
     },{
         "id":2,
         "name":"Rafez Hossain",
       "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/hossain.png"
     },{
         "id":3,
         "name":"Jonathan Smith",
       "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/smith.png"
     },{
         "id":4,
         "name":"Neymar Jr.",
        "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/neymar.png"
     },{
         "id":5,
         "name":"John Sina",
        "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/sina.png"
     },{
         "id":5,
         "name":"John Doe",
        "location":"Dhaka Bangladesh",
-        "joined":"Joined On:July 26th, 2022",
+        "joined":"Joined On: July 26th, 2022",
         "img":"./img/doe.png"
     }
 ]
