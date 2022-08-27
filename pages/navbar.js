@@ -25,7 +25,7 @@ const Navbar = ({ darkMode, dark }) => {
 		window.addEventListener('scroll', handleShadow);
 	}, []);
 	return (
-		<div>
+		<div className='w-full h-20 '>
 			<div
 				className={
 					dark
@@ -48,22 +48,22 @@ const Navbar = ({ darkMode, dark }) => {
 							</div>
 						</div>
 						<div className=' hidden md:flex justify-center items-center flex-1 h-full gap-4 '>
-							<Link href='/#heading'>
+							<Link href='/#dashboard'>
 								<span className=' cursor-pointer hover:text-white hover:bg-slate-800 hover:p-2 hover:rounded-lg text-sm m-2'>
 									Dashboard
 								</span>
 							</Link>
-							<Link href='/#contact'>
+							<Link href='/#campaign'>
 								<span className=' cursor-pointer hover:text-white hover:bg-slate-800 hover:p-2 hover:rounded-lg text-sm m-2'>
 									Campaign
 								</span>
 							</Link>
-							<Link href='/#about'>
+							<Link href='/#hypesocial'>
 								<span className=' cursor-pointer hover:text-white hover:bg-slate-800 hover:p-2 hover:rounded-lg text-sm m-2'>
 									Hypesocial
 								</span>
 							</Link>
-							<Link href='/#login'>
+							<Link href='/#insights'>
 								<span className=' cursor-pointer hover:text-white hover:bg-slate-800 hover:p-2 hover:rounded-lg text-sm m-2'>
 									Insights
 								</span>
@@ -111,28 +111,28 @@ const Navbar = ({ darkMode, dark }) => {
 								? 'md:hidden absolute left-0 top-[5rem] w-full h-[50%] bg-secondaryColor   ease-in duration-300 z-40 fcc'
 								: 'fixed left-[-25%] top-[70px] w-[25%] h-[50%] bg-secondaryColor  ease-in duration-300 z-40 fcc'
 						}>
-						<Link href='/#heading'>
+						<Link href='/#dashboard'>
 							<span
 								onClick={sideMe}
 								className=' cursor-pointer text-white text-2xl'>
 								Dashboard
 							</span>
 						</Link>
-						<Link href='/#contact'>
+						<Link href='/#Campaign'>
 							<span
 								onClick={sideMe}
 								className=' cursor-pointer text-white text-2xl'>
 								Campaign
 							</span>
 						</Link>
-						<Link href='/#about'>
+						<Link href='/#hypesocial'>
 							<span
 								onClick={sideMe}
 								className=' cursor-pointer text-white text-2xl'>
 								Hypesocial
 							</span>
 						</Link>
-						<Link href='/#login'>
+						<Link href='/#insights'>
 							<span
 								onClick={sideMe}
 								className=' cursor-pointer text-white text-2xl'>
